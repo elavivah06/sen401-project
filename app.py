@@ -1,34 +1,24 @@
-"""Main demo application for the Student Management System."""
-
-from students import students, average_score, add_student, median_score
-from utils.helpers import highest_score, lowest_score
+"""Main app — Lab 4 refactored entry point."""
+from database import init_db
+from controllers import add_student, add_inventory_item, get_student_stats, get_inventory_stats
 
 
 def main():
-    """Run the demo app."""
-    print("=" * 40)
-    print("STUDENT MANAGEMENT SYSTEM v1.1")
-    print("=" * 40)
-    print(f"Total students: {len(students)}")
-    print(f"Average Score: {average_score(students):.2f}")
-    print(f"Median Score:  {median_score(students):.2f}")
+    init_db()
+    print("=" * 50)
+    print("REFACTORED APP (SQLite-backed)")
+    print("=" * 50)
 
-    top = highest_score(students)
-    bottom = lowest_score(students)
-    print(f"Highest Score: {top['name']} - {top['score']}")
-    print(f"Lowest Score:  {bottom['name']} - {bottom['score']}")
+    # Seed demo data
+    add_student("James", 45)
+    add_student("Deborah", 82)
+    add_student("Aisha", 67)
 
-    print("\n-- Adding valid student --")
-    add_student("Grace", 88)
+    add_inventory_item("Laptop", 10, 1500.0)
+    add_inventory_item("Mouse", 50, 20.0)
 
-    print("\n-- Adding invalid students (should be rejected) --")
-    add_student("Bad Score", 150)
-    add_student("", 50)
-
-    print(f"\nTotal students after update: {len(students)}")
-    print(f"New Average: {average_score(students):.2f}")
-    print(f"New Median:  {median_score(students):.2f}")
-
+    print("\nStudent Stats:", get_student_stats())
+    print("Inventory Stats:", get_inventory_stats())
 
 if __name__ == "__main__":
     main()

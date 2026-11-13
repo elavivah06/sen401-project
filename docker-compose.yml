@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: sen401_app
+    volumes:
+      - ./student_app.db:/app/student_app.db
+    restart: "no"
