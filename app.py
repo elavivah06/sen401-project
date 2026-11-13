@@ -20,6 +20,5 @@ def main():
     print("\nStudent Stats:", get_student_stats())
     print("Inventory Stats:", get_inventory_stats())
 
-
 if __name__ == "__main__":
     main()
