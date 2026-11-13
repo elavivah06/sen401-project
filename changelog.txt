@@ -1,0 +1,8 @@
+* a74a761 (HEAD -> dev, origin/dev) Lab 3: Add inventory module and helpers
+| * 0ce9183 (tag: v1.1, origin/main, main) Merge pull request #1 from elavivah06/maint/v1.1-updates
+|/| 
+| * bf9f933 (origin/maint/v1.1-updates, maint/v1.1-updates) Lab 2: Corrective, adaptive, perfective, preventive maintenance
+|/  
+* 5aa3216 (tag: v1.0, origin/feature/add-grade, feature/add-grade) Initial commit: modular student project
+a74a761 | elavivah06 | 2026-11-13 | Lab 3: Add inventory module and helpers
+5aa3216 | elavivah06 | 2026-11-13 | Initial commit: modular student project
